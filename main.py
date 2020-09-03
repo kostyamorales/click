@@ -3,7 +3,6 @@ from os import getenv
 from urllib.parse import urlparse
 import argparse
 from dotenv import load_dotenv
-load_dotenv()
 
 
 def shorten_link(token, long_url):
@@ -30,7 +29,7 @@ def count_clicks(token, link):
 
 
 if __name__ == '__main__':
-
+    load_dotenv()
     token = getenv('TOKEN_BITLY')
     parser = argparse.ArgumentParser(
         description='Программа укорачивает ссылки или выводит количество переходов по уже укороченной ссылке'
